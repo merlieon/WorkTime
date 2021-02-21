@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_earned"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/earnedYMWBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="År / Månad / Vecka"/>
+
+    <TextView
+        android:id="@+id/earnedTotWorkedHoursTV"
+        android:layout_below="@id/earnedYMWBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:hint="Antal jobbade timmar"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"/>
+    <TextView
+        android:id="@+id/earnedSalaryBeforeTV"
+        android:layout_below="@id/earnedTotWorkedHoursTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:hint="Brutto Lön"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"/>
+    <TextView
+        android:id="@+id/earnedTaxTV"
+        android:layout_below="@id/earnedSalaryBeforeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:hint="Skatt"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"/>
+    <TextView
+        android:id="@+id/earnedSalaryAfterTV"
+        android:layout_below="@id/earnedTaxTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:hint="Netto Lön"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"/>
+
+
+</RelativeLayout>

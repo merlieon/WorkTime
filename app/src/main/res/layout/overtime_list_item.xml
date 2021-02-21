@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_above="@+id/bottom_navigation">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="100"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/wpOvertimeListViewItemAddIB"
+            android:layout_weight="40"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_add"
+            android:background="@android:color/holo_green_light" />
+
+        <ImageButton
+            android:layout_weight="40"
+            android:id="@+id/wpOvertimeListViewItemRemoveIB"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_remove"
+            android:background="@android:color/holo_red_light" />
+
+        <EditText
+            android:id="@+id/wpOvertimeListItemET"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_weight="20"
+            android:gravity="center"
+            android:text="Övertid"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

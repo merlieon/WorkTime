@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_above="@+id/bottom_navigation">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="100">
+
+        <TextView
+            android:id="@+id/trWorkedDateListItemTV"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_weight="66.6"
+            android:gravity="center"
+            android:text="Worked Date"
+            android:textAlignment="center" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="33.3"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/trHoursListItemTV"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="Hours" />
+
+            <TextView
+                android:id="@+id/trSalaryListItemTV"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@id/text2"
+                android:gravity="center"
+                android:text="Salary" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

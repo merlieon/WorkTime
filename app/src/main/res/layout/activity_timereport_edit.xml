@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:Context=".TimeReportEditActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/timeReportEditToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:popupTheme="@style/Theme.AppCompat.Light" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/trbuttomLayoutEditBtns"
+        android:layout_below="@+id/timeReportEditToolbar"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Spinner
+                android:id="@+id/trCompanyNameEditSP"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/trDateEditET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/trCompanyNameEditSP"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
+                android:focusable="false"
+                android:gravity="center"
+                android:hint="Datum" />
+
+            <EditText
+                android:id="@+id/trHoursEditET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/trDateEditET"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
+                android:focusable="false"
+                android:gravity="center"
+                android:hint="Antal jobbade timmar"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/trUnpaidBrakeEditET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/trHoursEditET"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
+                android:focusable="false"
+                android:gravity="center"
+                android:hint="Obetalda raster"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/trHourSalaryEditTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/trUnpaidBrakeEditET"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:hint="Timlön"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/trObHoursEditET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/trHourSalaryEditTV"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
+                android:focusable="false"
+                android:gravity="center"
+                android:hint="Överbetald tid"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/trSalaryEditTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/trObHoursEditET"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:hint="Brutto lön"
+                android:padding="10dp" />
+
+            <Switch
+                android:id="@+id/trHaveWorkedEditSW"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/trSalaryEditTV"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginRight="10dp"
+                android:checked="false"
+                android:text="har arbetat" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/trbuttomLayoutEditBtns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:weightSum="100">
+
+        <Button
+            android:id="@+id/trCancelEditBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_weight="50"
+            android:background="#707070"
+            android:text="Cancel" />
+
+        <Button
+            android:id="@+id/trSaveEditBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_weight="50"
+            android:background="#0F61FD"
+            android:text="Save" />
+    </LinearLayout>
+
+</RelativeLayout>

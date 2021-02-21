@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.worktime">
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".TimeReportAddActivity"
+            android:label="Lägg till tidsrapport"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TimeReportViewActivity"
+            android:label="Tidsrapport"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TimeReportEditActivity"
+            android:label="Uppdatera Tidsrapport"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".WorkplaceAddActivity"
+            android:label="Lägg till arbetsplats"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".WorkplaceViewActivity"
+            android:label="Arbetsplats"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".WorkplaceEditActivity"
+            android:label="Uppdatera Arbetsplats"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBarDrawer">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

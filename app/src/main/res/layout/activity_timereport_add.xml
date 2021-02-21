@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:Context=".TimeReportAddActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/timeReportAddToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:popupTheme="@style/Theme.AppCompat.Light" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/trbuttomLayoutAddBtns"
+        android:layout_below="@id/timeReportAddToolbar"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Spinner
+                android:id="@+id/trCompanyNameAddSP"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/trDateAddET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/trCompanyNameAddSP"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
+                android:focusable="false"
+                android:gravity="center"
+                android:hint="Datum" />
+
+            <EditText
+                android:id="@+id/trHoursAddET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/trDateAddET"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
+                android:focusable="false"
+                android:gravity="center"
+                android:hint="Antal Timmar" />
+
+
+            <EditText
+                android:id="@+id/trUnpaidBrakeAddET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/trHoursAddET"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
+                android:focusable="false"
+                android:gravity="center"
+                android:hint="Obetalda raster" />
+
+            <TextView
+                android:id="@+id/trHourSalaryAddTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/trUnpaidBrakeAddET"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:hint="Timlön"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/trObHoursAddET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/trHourSalaryAddTV"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
+                android:focusable="false"
+                android:gravity="center"
+                android:hint="Överbetald tid"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/trSalaryAddTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/trObHoursAddET"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:hint="Brutto lön"
+                android:padding="10dp" />
+
+            <Switch
+                android:id="@+id/trHaveWorkedAddSW"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/trSalaryAddTV"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="30dp"
+                android:checked="false"
+                android:text="har arbetat" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/trbuttomLayoutAddBtns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:weightSum="100">
+
+        <Button
+            android:id="@+id/trCancelAddBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_weight="50"
+            android:background="#707070"
+            android:text="Cancel" />
+
+        <Button
+            android:id="@+id/trSaveAddBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_weight="50"
+            android:background="#0F61FD"
+            android:text="Save" />
+    </LinearLayout>
+
+</RelativeLayout>

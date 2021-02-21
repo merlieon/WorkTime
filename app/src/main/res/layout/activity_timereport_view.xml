@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:Context=".TimeReportViewActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/timeReportViewToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:popupTheme="@style/Theme.AppCompat.Light"
+        app:menu="@menu/toolbar_edit_menu"/>
+
+    <TextView
+        android:id="@+id/trDateViewTV"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/timeReportViewToolbar"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:hint="Datum" />
+
+    <TextView
+        android:id="@+id/trCompanyNameViewTV"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/trDateViewTV"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:hint="Företags namn" />
+
+    <TextView
+        android:id="@+id/trHoursViewTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/trCompanyNameViewTV"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:hint="Antal jobbade timmar"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/trUnpaidBrakeViewTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/trHoursViewTV"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:hint="Obetalda raster"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/trHourSalaryViewTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/trUnpaidBrakeViewTV"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:hint="Timlön"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/trObHoursViewTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/trHourSalaryViewTV"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:hint="Överbetald tid"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/trSalaryViewTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/trObHoursViewTV"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:hint="Brutto lön"
+        android:padding="10dp" />
+    <Button
+        android:id="@+id/trDeleteBtn"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="Ta Bort Tidsrapport"
+        android:background="@color/red"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Spinner
+        android:id="@+id/homeSP"
+        android:layout_width="match_parent"
+        android:layout_height="43dp" />
+
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/timeReportRV"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:listitem="@layout/time_report_list_item"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="60dp"/>
+
+</LinearLayout>

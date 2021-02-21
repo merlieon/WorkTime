@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:Context=".WorkplaceViewActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/workplaceViewToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:menu="@menu/toolbar_edit_menu"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:popupTheme="@style/Theme.AppCompat.Light"/>
+
+    <TextView
+        android:id="@+id/wpCompanyNameViewTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/workplaceViewToolbar"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:hint="@string/company_name" />
+
+    <TextView
+        android:id="@+id/wpCompanyOrgNumViewTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wpCompanyNameViewTV"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:hint="@string/company_orgnum" />
+
+    <TextView
+        android:id="@+id/wpCompanyAddressViewTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wpCompanyOrgNumViewTV"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:hint="@string/company_address" />
+
+    <TextView
+        android:id="@+id/wpCompanySalaryViewTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wpCompanyAddressViewTV"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:hint="@string/company_salary" />
+
+    <TextView
+        android:id="@+id/wpCompanyObSalaryViewTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wpCompanySalaryViewTV"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:hint="@string/company_overtime"/>
+    <Button
+        android:id="@+id/wpDeleteBtn"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="Ta Bort arbetsplats"
+        android:background="@color/red"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>
